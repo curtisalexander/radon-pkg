@@ -2,9 +2,9 @@ PKGTGZ=blah_0.1.tar.gz
 PKGDIR=blah
 RADON:=$(shell command -v radon)
 
-all: targz pkginstall
+all: pkg pkginstall
 
-targz:
+pkg:
 	R CMD build $(PKGDIR)
 	# tar czvf $(PKGTGZ) $(PKGDIR)
 
